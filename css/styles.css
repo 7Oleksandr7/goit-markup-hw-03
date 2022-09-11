@@ -8,6 +8,34 @@
 /* колір фону приклади робіт #EEEEEE; */
 /* колір фону footer hero #2F303A; */
 
+*{outline: 1px solid teal;}
+
+/* Утиліти */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul{
+  margin: 0;
+}
+
+ul{
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Загальні */
+
 :root {
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
@@ -29,21 +57,40 @@ body {
   background-color: var(--primary-bg-color);
 }
 
-
-.list {
-  list-style: none;
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.link {
-  text-decoration: none;
+.section{
+  padding-top: 94px;
+}
+
+.team-section{
+  padding-bottom: 94px;
 }
 
 /* header */
+
 .header {
   background-color: var(--primary-white-color);
+  border: 1px solid #ECECEC;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+}
+
+.header-nav{
+  display: flex;
 }
 
 .logo {
+  padding: 24px 0 25px 0;
+  
   color: var(--primary-black-color);
   font-family: Raleway;
   font-weight: 700;
@@ -53,6 +100,7 @@ body {
 }
 
 .accent {
+  padding: 24px 0 25px 0;
   color: var(--accent-color);
 }
 
@@ -61,10 +109,23 @@ body {
   color: var(--accent-color);
 }
 
+.header-nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
+.header-nav-list .item + .item{
+  margin-left: 50px;
+}
+
 .header-nav-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
-  font-weight: 500;
+  font-weight: 500; 
 }
 
 .header-nav-list .link:hover,
@@ -76,7 +137,20 @@ body {
   color: var(--accent-color);
 }
 
+.contact-list{
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-list .item + .item{
+  margin-left: 50px;
+}
+
 .contact-list a {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -88,12 +162,18 @@ body {
   color: var(--accent-color);
 }
 
+
 /* Hero */
+
 .hero {
   background-color: var(--hero-footer-bg-color);
   color: var(--primary-white-color);
+  text-align: center;
 }
+
 .hero-title {
+  margin-bottom: 30px;
+  
   font-weight: 900;
   font-size: 44px;
   line-height: 1.37;
@@ -102,25 +182,42 @@ body {
 }
 
 .hero-btn {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 10px 32px;
+  display: inline-block;
+  min-width: 216px;
+
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  text-align: center; 
 }
 
 .pointer {
   cursor: pointer;
 }
 
+.hero-and-btn{
+ padding-top: 200px ;
+ padding-bottom: 200px;
+ 
+
+}
+
 /* section features&what we do*/
+
 .item-title {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
 }
+
 .item-text {
   color: var(--secondary-text-color);
   line-height: 1.71;
